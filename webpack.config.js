@@ -36,7 +36,15 @@ const base = {
             })
         ]
     },
-    plugins: []
+    plugins: [],
+    node: {
+        // console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        child_process: 'empty',
+        global: true
+    }
 };
 
 module.exports = [
