@@ -7,9 +7,9 @@ const Base64Util = require('../../util/base64-util');
 const BTSession = require('../../io/btSession');
 const MathUtil = require('../../util/math-util');
 const req = require('./req');
-const request = require('request');
 
-const async = require('async');
+// const request = require('request');
+// const async = require('async');
 // const request = require('sync-requet');
 
 /**
@@ -105,24 +105,6 @@ class MODI {
 
         return p;
     }
-
-    isButtonPressed(){
-        return new Promise(function(resolve, reject){
-            request({
-                    url : 'http://localhost:3000/button/pressed',
-                    method : 'POST'
-        
-                }, function(error, response, body){
-                    body *= 1;
-                    resolve(body);
-            });
-        });
-        // var res =request('POST','http://localhost:3000/button/pressed');
-        // var value = res.getBody();
-        // return value;
-        
-    }
-
 }
 
 class Scratch3ModiBlocks {
@@ -342,7 +324,6 @@ class Scratch3ModiBlocks {
         // var value = res.getBody('utf8');
         
         // return value;
-        return this._device.isButtonPressed().then() > 0;
 
         // return new Promise(function(resolve, reject){
         //     request({
@@ -354,6 +335,7 @@ class Scratch3ModiBlocks {
         //             resolve(body);
         //     });
         // });
+
         // request({
         //     url : 'http://localhost:3000/button/pressed',
         //     method : 'POST'
