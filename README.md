@@ -1,3 +1,12 @@
+## 기존 오픈소스에서 추가, 수정한 부분
+
+src/extension-support/extension-manager.js 내에 MODI 관련 내용 추가
+
+src/extensions/ 폴더 내에 scratch3_modi 폴더를 생성하고 index.js와 req.js 정의
+
+## 구동 방법
+clone 이후 npm install 만 해주시면 됩니다.
+
 ## scratch-vm
 #### Scratch VM is a library for representing, running, and maintaining the state of computer programs written using [Scratch Blocks](https://github.com/LLK/scratch-blocks).
 
